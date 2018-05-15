@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".march.PictureActivity">
 
-    <com.example.admin.marchtest.MarchUtil.Ima
+    <com.example.admin.marchtest.MarchUtil.pic
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/picture"

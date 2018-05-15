@@ -67,7 +67,7 @@ public class Pm25Fragment extends Fragment {
                 //lineDataSet.clear();
                 Ran();
                 //lineData.clearValues();
-                getActivity().runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread( new Runnable() {
                     @Override
                     public void run() {
 

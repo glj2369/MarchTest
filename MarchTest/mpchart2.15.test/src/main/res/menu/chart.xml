@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/one"
+            android:icon="@drawable/logo1"
+            android:title="折线图" />
+
+        <item
+            android:id="@+id/two"
+            android:icon="@drawable/logo1"
+            android:title="条形图" />
+
+        <item
+            android:id="@+id/three"
+            android:icon="@drawable/logo1"
+            android:title="横向条形图" />
+
+        <item
+            android:id="@+id/four"
+            android:icon="@drawable/logo1"
+            android:title="饼图" />
+
+
+    </group>
+
+
+</menu>

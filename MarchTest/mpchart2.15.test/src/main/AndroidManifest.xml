@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Line_Activity" />
+        <activity android:name=".BarActivity" />
+        <activity android:name=".HorActivity" />
+        <activity android:name=".PieActivity"></activity>
     </application>
 
 </manifest>
