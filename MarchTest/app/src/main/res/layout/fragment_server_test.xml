@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ServerTest">
+
+    <include layout="@layout/title_layout" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </Spinner>
+
+    <WebView
+        android:id="@+id/show_service"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="9"
+        android:text="请求结果"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/request"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1.5"
+        android:text="服务器请求测试"
+        android:textSize="20sp" />
+</LinearLayout>

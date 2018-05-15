@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/car_parktwo"
+    android:gravity="center">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="IC卡号"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkicid"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#446D97" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="车牌号码"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkid"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#446D97" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="人员姓名"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkPerson"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#446D97" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="入场时间"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkin"/>
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#446D97" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="出场事件"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkout"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#446D97" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="收费金额"
+        android:textColor="#485F8D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/carParkMoney"/>
+
+
+</LinearLayout>

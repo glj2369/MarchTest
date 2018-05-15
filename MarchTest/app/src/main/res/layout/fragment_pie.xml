@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".march.data_fragment.PieFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="平台上有违章车辆和没违章车辆的占比统计"
+        android:textColor="#607589"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        />
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/car_pie">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+
+
+</LinearLayout>
