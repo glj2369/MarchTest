@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.admin.marchtest.MPchart.WratherLineFragment;
@@ -37,6 +38,8 @@ import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        view = findViewById(R.id.vis);
     }
 
     @Override
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_1) {
             replace(new ChartFragment());
+
             // Handle the camera action
         } else if (id == R.id.nav_2) {
             replace(new MpChartFragment());
@@ -158,9 +163,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void replace(Fragment fragment) {
+
+        view.setVisibility(View.GONE);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.coor, fragment);
         transaction.commit();
     }
+
+
 }

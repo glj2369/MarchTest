@@ -7,28 +7,43 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
-    tools:openDrawer="start">
+    tools:openDrawer="right">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <com.example.mpchart215test.MarTe
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="主视图"
+            android:background="@drawable/mt"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="十年生死两茫茫，不思量自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面鬓如霜。"
+            android:textColor="#00BFFF"
+            android:textSize="40sp"
             android:textStyle="bold" />
-    </LinearLayout>
+
+        <com.example.mpchart215test.Picture
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/gf" />
+
+
+    </FrameLayout>
 
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header"
-        app:menu="@menu/chart"
-        android:layout_gravity="start"
-        android:id="@+id/nav">
+        app:menu="@menu/chart">
 
 
     </android.support.design.widget.NavigationView>

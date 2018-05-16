@@ -39,6 +39,8 @@ public class PieActivity extends AppCompatActivity implements View.OnClickListen
         pieDataSet.setValueFormatter(new PercentFormatter());
         pieData=new PieData(s,pieDataSet);
         pieData.setValueTextSize(20);
+        pieDataSet.setSelectionShift(25f);//设置饼状Item被选中时变化的距离
+        pieDataSet.setSliceSpace(5); //设置饼状Item之间的间隙
         mPieChart.setData(pieData);
         mPieChart.setDrawHoleEnabled(false);
 
@@ -72,6 +74,9 @@ public class PieActivity extends AppCompatActivity implements View.OnClickListen
             default:
                 break;
             case R.id.pie_re:
+                pieDataSet.clear();
+                ran();
+                mPieChart.invalidate();
                 break;
         }
     }

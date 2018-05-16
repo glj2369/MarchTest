@@ -13,6 +13,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -44,8 +45,11 @@ public class Line_Activity extends AppCompatActivity implements View.OnClickList
         initView();
         Ran();
         lineDataSet = new LineDataSet(entries, "标签1");//为图例标签说明
+        lineDataSet.setCircleColors(ColorTemplate.JOYFUL_COLORS);//圆圈颜色
+
         //第二条线
         lineDataSet1 = new LineDataSet(entries1, "标签2");
+        lineDataSet1.setColor(Color.YELLOW);
         lineDataSet1.setValueFormatter(new PercentFormatter());//百分比格式化
         //向集合填入2条线
         lineDataSets.add(lineDataSet);
