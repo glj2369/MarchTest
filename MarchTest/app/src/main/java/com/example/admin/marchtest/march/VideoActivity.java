@@ -45,19 +45,24 @@ public class VideoActivity extends AppCompatActivity {
         //File file = new File(Environment.getExternalStorageDirectory() + "/wgj.mp4");
         //Log.d("VideoActivity", file.toString());
 
-           // Toast.makeText(this, file.toString(), Toast.LENGTH_SHORT).show();
-            MediaController mediaController = new MediaController(this);
-            //mVideoPlayer.setVideoPath(file.getAbsolutePath());
+        // Toast.makeText(this, file.toString(), Toast.LENGTH_SHORT).show();
+        MediaController mediaController = new MediaController(this);
+        //mVideoPlayer.setVideoPath(file.getAbsolutePath());
 
+        String s = "android.resource://" + getPackageName() + "/" + R.raw.hf;
+        String s1 = "android.resource://" + getPackageName() + "/raw/hf";
+        String s2 = "android.resource://" + getPackageName() + "/raw/" + R.raw.hf;
+        mVideoPlayer.setVideoURI(Uri.parse(s2));
+        Log.e("VidepActivity", s);
+        Log.e("VidepActivity", s1);
+        Log.e("VidepActivity", s2);
+        mVideoPlayer.setMediaController(mediaController);
+        // 设置MediaController与VideView建立关联
+        mediaController.setMediaPlayer(mVideoPlayer);
 
-            mVideoPlayer.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/raw/"+R.raw.hf));
-            mVideoPlayer.setMediaController(mediaController);
-            // 设置MediaController与VideView建立关联
-            mediaController.setMediaPlayer(mVideoPlayer);
-
-            // 让VideoView获取焦点
-            mVideoPlayer.requestFocus();
-            mVideoPlayer.start();
+        // 让VideoView获取焦点
+        mVideoPlayer.requestFocus();
+        mVideoPlayer.start();
 
 
         //Toast.makeText(this, file.toString(), Toast.LENGTH_SHORT).show();

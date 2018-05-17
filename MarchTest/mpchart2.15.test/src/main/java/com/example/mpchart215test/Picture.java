@@ -43,7 +43,6 @@ public class Picture extends ImageView implements ScaleGestureDetector.OnScaleGe
         float factor = detector.getScaleFactor();
         matrix.postScale(factor, factor, getWidth() / 2, getHeight() / 2);
         setImageMatrix(matrix);
-
         return true;
     }
 
