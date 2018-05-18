@@ -55,7 +55,7 @@ public class GridViewFragment extends Fragment {
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(), position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), position + "", Toast.LENGTH_SHORT).show();
             }
         });
         return view;
