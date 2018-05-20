@@ -34,23 +34,25 @@ public class CarVideoFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_car_video, container, false);
         fragmentTabHost = view.findViewById(android.R.id.tabhost);
-        title=view.findViewById(R.id.title);
+        title = view.findViewById(R.id.title);
         title.setText("车辆违章");
         fragmentTabHost.setup(getActivity(), getChildFragmentManager(), R.id.flayout_content);
-        TabHost.TabSpec video = fragmentTabHost.newTabSpec("违章视频").setIndicator("违章视频");
-        fragmentTabHost.addTab(video, VideFragment.class, null);
-        TabHost.TabSpec picture = fragmentTabHost.newTabSpec("违章图片").setIndicator("违章图片");
-        fragmentTabHost.addTab(picture, PictureFragment.class, null);
+
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("违章视频").setIndicator("违章视频"), VideFragment.class, null);
+        fragmentTabHost.addTab(fragmentTabHost.newTabSpec("违章图片").setIndicator("违章图片"), PictureFragment.class, null);
+
+        fragmentTabHost.setCurrentTab(0);
         fragmentTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
-                Toast.makeText(getActivity(),tabId, Toast.LENGTH_SHORT).show();
-                for (int i=0;i<fragmentTabHost.getTabWidget().getTabCount();i++){
+                //Toast.makeText(getActivity(), tabId, Toast.LENGTH_SHORT).show();
+                for (int i = 0; i < fragmentTabHost.getTabWidget().getTabCount(); i++) {
                     View view = fragmentTabHost.getTabWidget().getChildAt(i);
-                    if(fragmentTabHost.getCurrentTab()==i){
+                    if (fragmentTabHost.getCurrentTab() == i) {
                         view.setBackgroundColor(-16728065);
 
-                    }else {view.setBackgroundColor(Color.WHITE);
+                    } else {
+                        view.setBackgroundColor(Color.WHITE);
 
                     }
                 }

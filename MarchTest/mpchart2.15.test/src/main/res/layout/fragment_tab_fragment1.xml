@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.TabFragment1">
+
+    <Switch
+        android:id="@+id/switchTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:showText="true"
+        android:textOff="关闭"
+        android:textOn="启动"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进度条对话框" />
+
+    <Button
+        android:id="@+id/noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="系统通知" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="禁用" />
+
+</LinearLayout>

@@ -4,6 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -100,6 +103,7 @@ public class Line_Activity extends AppCompatActivity implements View.OnClickList
             default:
                 break;
             case R.id.line_re:
+                mLineRe.startAnimation(AnimationUtils.loadAnimation(Line_Activity.this, R.anim.ro));
                 lineDataSet.clear();
                 lineDataSet1.clear();
                 Ran();

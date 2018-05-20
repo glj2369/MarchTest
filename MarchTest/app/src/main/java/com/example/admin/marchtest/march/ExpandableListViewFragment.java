@@ -39,10 +39,10 @@ public class ExpandableListViewFragment extends Fragment {
     private View view;
     private ExpandableListView mExpandList;
     private expandablelistviewAdapter adapter;
-    private String[] strings=new String[]{"一号站台","二号站台"};
-    private Map<String,List<ExpandList>> listMap=new HashMap<>();
-    private List<ExpandList> list1=new ArrayList<>();
-    private List<ExpandList> list2=new ArrayList<>();
+    private String[] strings = new String[]{"一号站台", "二号站台"};
+    private Map<String, List<ExpandList>> listMap = new HashMap<>();
+    private List<ExpandList> list1 = new ArrayList<>();
+    private List<ExpandList> list2 = new ArrayList<>();
     private Context context;
     private Timer timer;
     private TextView textView;
@@ -54,7 +54,7 @@ public class ExpandableListViewFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -64,15 +64,15 @@ public class ExpandableListViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_expandable_list_view, container, false);
         initView(view);
         timer = new Timer();
-        TimerTask timerTask= new TimerTask() {
+        TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
                 getDate();
             }
         };
-        timer.schedule(timerTask,1000,3000);
+        timer.schedule(timerTask, 1000, 3000);
 
-        adapter = new expandablelistviewAdapter(listMap,strings,context);
+        adapter = new expandablelistviewAdapter(listMap, strings, context);
         mExpandList.setAdapter(adapter);
         return view;
     }
@@ -103,7 +103,7 @@ public class ExpandableListViewFragment extends Fragment {
                         int busId = jsonObject.getInt("BusId");
                         //这里给数据
                         //busId + "号公交车，距离" + distance
-                        list1.add( new ExpandList(busId + "号公交车，距离" + distance,"十年生死两茫茫",R.drawable.logo1));
+                        list1.add(new ExpandList(busId + "号公交车，距离" + distance, "十年生死两茫茫", R.drawable.logo1));
                     }
 
                     JSONObject jsonObject2 = new JSONObject();
@@ -119,7 +119,7 @@ public class ExpandableListViewFragment extends Fragment {
                         int busId = json.getInt("BusId");
                         //这里给数据
                         // busId + "号公交车，距离" + distance
-                        list2.add( new ExpandList(busId + "号公交车，距离" + distance,"不思量 自难忘",R.drawable.logo2));
+                        list2.add(new ExpandList(busId + "号公交车，距离" + distance, "不思量 自难忘", R.drawable.logo2));
                     }
                     //这里给数据
                     listMap.clear();
@@ -153,7 +153,7 @@ public class ExpandableListViewFragment extends Fragment {
 
     private void initView(View view) {
         mExpandList = (ExpandableListView) view.findViewById(R.id.expand_List);
-        textView=view.findViewById(R.id.title);
+        textView = view.findViewById(R.id.title);
         textView.setText("公交查询");
     }
 

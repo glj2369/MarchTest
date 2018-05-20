@@ -19,7 +19,10 @@
         <activity android:name=".Line_Activity" />
         <activity android:name=".BarActivity" />
         <activity android:name=".HorActivity" />
-        <activity android:name=".PieActivity"></activity>
+        <activity android:name=".PieActivity" />
+        <activity android:name=".ViewPagerActivity" />
+        <activity android:name=".fxActivity" />
+        <activity android:name=".fx2Activity"></activity>
     </application>
 
 </manifest>

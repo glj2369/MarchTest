@@ -12,7 +12,6 @@ public class Okhttp {
         OkHttpClient okHttpClient=new OkHttpClient();
         Request request=new  Request.Builder()
                 .url(str)
-
                 .build();
         okHttpClient.newCall(request).enqueue(callback);
 

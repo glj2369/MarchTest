@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MpChart2.15.Test</string>
+    <string name="ten">十年生死两茫茫，不思量自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面鬓如霜。</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

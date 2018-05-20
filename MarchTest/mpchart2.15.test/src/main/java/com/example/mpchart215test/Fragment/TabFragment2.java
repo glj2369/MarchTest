@@ -31,7 +31,7 @@ public class TabFragment2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_tab_fragment2, container, false);
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
+       /* AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
                 .setTitle("标题")
                 .setMessage("提示。。。")
                 .setCancelable(true)
@@ -54,7 +54,20 @@ public class TabFragment2 extends Fragment {
                     }
                 });
         AlertDialog dialog = builder.create();
-        dialog.show();
+        dialog.show();*/
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
+                .setTitle("title")
+                .setMessage("hello")
+                .setCancelable(true)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getActivity(), "hello", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        builder.create().show();
 
         return view;
     }
